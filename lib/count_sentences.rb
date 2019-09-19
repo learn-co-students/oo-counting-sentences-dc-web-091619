@@ -20,6 +20,8 @@ class String
   end
 
   def count_sentences
-    self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
+    self.scan(/[^\.!?]+[\.!?]/).count
+    #[^ ] negation operator. looking for characters without .!?
+    # and + [\.!?] capturing everything without .!? until we get .!? character
   end
 end
